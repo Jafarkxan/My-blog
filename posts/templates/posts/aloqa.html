@@ -1,0 +1,36 @@
+{% extends "posts/base.html" %}
+
+{% block title %}Aloqa{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">📬 Biz bilan bog‘laning</h1>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm p-4">
+                <form method="post">
+                    {% csrf_token %}
+                    
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Ismingiz</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Ismingizni kiriting" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Emailingizni kiriting" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Xabar</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Xabaringizni yozing" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-success w-100">Xabar yuborish</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

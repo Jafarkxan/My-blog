@@ -1,0 +1,31 @@
+{% extends 'posts/base.html' %}
+
+{% block title %}Biz haqimizda{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm p-4">
+                <h1 class="text-center mb-4">Biz haqimizda</h1>
+                
+                <!-- Kim ekaningiz -->
+                <p>Salom! Men <strong>Zafarbek Xudoyqulov</strong>, bu blog orqali dasturlash, texnologiya va IT bo‘yicha foydali maqolalarni taqdim qilaman.</p>
+
+                <!-- Maqsad va missiya -->
+                <p>Bizning maqsadimiz – yangi boshlovchilar va tajribali dasturchilar uchun oson tushunarli, amaliy maqolalar bilan bilimlarni oshirish.</p>
+
+                <!-- Nimalarni taklif qilasiz -->
+                <p>Bu blogda siz <strong>Python, Django, web rivojlantirish</strong> va dasturlash bo‘yicha yangiliklar va qo‘llanmalarni topasiz.</p>
+
+                <!-- Kontakt -->
+                <p>Agar savol yoki takliflaringiz bo‘lsa, biz bilan <a href="{% url 'aloqa' %}">aloqa sahifasi</a> orqali bog‘lanishingiz mumkin.</p>
+
+                <div class="text-center mt-4">
+                    <a href="{% url 'post_list' %}" class="btn btn-primary">⬅️ Barcha postlarga qaytish</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

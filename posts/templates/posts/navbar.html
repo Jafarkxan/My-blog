@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <!-- Logo / Blog nomi -->
+    <a class="navbar-brand" href="{% url 'post_list' %}">📝 Mening Blogim</a>
+
+    <!-- Navbar qismida Dark/Light tugma -->
+      <button id="theme-toggle" class="btn btn-outline-dark ms-auto">
+          🌙 / ☀️
+      </button>
+
+
+    <!-- Mobil menyu tugmasi -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menyu bo‘limlari -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <!-- Bosh sahifa -->
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'post_list' %}">🏠 Bosh sahifa</a>
+        </li>
+
+        <!-- Biz haqimizda -->
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'about_us' %}">ℹ️ Biz haqimizda</a>
+        </li>
+
+        <!-- Aloqa -->
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'aloqa' %}">📞 Aloqa</a>
+        </li>
+
+        <!-- Keyinchalik Login / Logout qo‘shamiz -->
+      </ul>
+    </div>
+  </div>
+</nav>
